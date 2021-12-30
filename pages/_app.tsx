@@ -1,6 +1,11 @@
 import React from 'react';
 import '@styles/globals.css';
 import type { AppProps } from 'next/app';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCoffee);
 
 if (typeof window !== 'undefined' && process.env.NODE_ENV !== 'production') {
   const ReactDOM = require('react-dom'); // eslint-disable-line global-require, @typescript-eslint/no-var-requires

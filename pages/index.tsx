@@ -2,6 +2,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '@styles/Home.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+// The following import prevents a Font Awesome icon server-side rendering bug,
+// where the icons flash from a very large icon down to a properly sized one:
+import '@fortawesome/fontawesome-svg-core/styles.css';
+// Prevent fontawesome from adding its CSS since we did it manually above:
+import { config } from '@fortawesome/fontawesome-svg-core';
+config.autoAddCss = false; /* eslint-disable import/first */
 
 const Home: NextPage = () => {
   return (
@@ -16,7 +24,13 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <h2 className="text-3xl p-4 text-red-500 font-bold">With Tailwind</h2>
+        <h2 className="text-3xl p-4 text-red-500 font-bold">
+          With Tailwind
+          <span>
+            <FontAwesomeIcon icon={['fab', 'twitter']} />
+            <FontAwesomeIcon icon="coffee" />
+          </span>
+        </h2>
         <p className={styles.description}>
           Get started by editing <code className={styles.code}>pages/index.tsx</code>
         </p>
