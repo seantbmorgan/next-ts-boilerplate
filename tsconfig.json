@@ -2,26 +2,29 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@interfaces/*": [
-        "./interfaces/*"
-      ],
       "@pages/*": [
         "./pages/*"
       ],
       "@src/*": [
         "src/*"
       ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
       "@context/*": [
-        "./context/*"
+        "./src/context/*"
       ],
       "@hooks/*": [
-        "./hooks/*"
+        "./src/hooks/*"
       ],
       "@styles/*": [
         "./styles/*"
       ],
       "@utils/*": [
-        "./utils/*"
+        "./src/utils/*"
       ],
     },
     "target": "es5",
